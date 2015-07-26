@@ -1,7 +1,5 @@
 <?php include('header.php'); ?>
 
-<i class="fa fa-name-shape-o-direction"></i>
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">

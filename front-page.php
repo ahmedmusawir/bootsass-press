@@ -1,6 +1,4 @@
-<?php include('header.php'); ?>
-
-<i class="fa fa-name-shape-o-direction"></i>
+<?php get_header(); ?>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -76,4 +74,4 @@
 
 
 
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>

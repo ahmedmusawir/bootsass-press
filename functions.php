@@ -54,10 +54,28 @@ function register_theme_menus() {
 			'header-menu' => __( 'Header Menu' )
 
 		) 
-
 	);
 }
 add_action( 'init', 'register_theme_menus' );
+
+/**
+*
+* Add Featured 
+*
+**/
+add_theme_support( 'post-thumbnails' ); 
+add_image_size( 'portvideo-single-banner', 1180, 580, true );
+
+/**
+*
+* Customize Excerpt
+*
+**/
+function custom_excerpt_length() {
+	return 40;
+}
+
+add_filter( 'excerpt_length', 'custom_excerpt_length' );
 
 /**
 *
@@ -82,6 +100,8 @@ function create_widget( $name, $id, $description ) {
 create_widget( 'Front Page Left', 'front-left', 'Displays on the left of the homepage' );
 create_widget( 'Front Page Center', 'front-center', 'Displays on the center of the homepage' );
 create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the homepage' );
+create_widget( 'Sidebar Blog', 'sidebar-blog', 'Displays on the Blog Sidebar' );
+create_widget( 'Sidebar Page', 'sidebar-page', 'Displays on the Page Sidebar' );
 
 
 

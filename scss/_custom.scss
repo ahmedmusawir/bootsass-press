@@ -6,6 +6,8 @@
 
 	h1 {
 		color: $brand-primary;
+		font-variant: small-caps;
+		// border: 1px solid red;
 	}
 
 	.index-content {
@@ -25,9 +27,18 @@
 
 .blog-index-content {
 	padding-left: 1em;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: lighten( red, 35%) !important;
+		}
+	}
 }
 .blog-index-img {
 	padding-right: 1.3em;
+	margin-bottom: 1.5em;
 }
 
 .portfolio-item {
@@ -38,11 +49,50 @@
 
 /**
 *
+* PortVideo Content
+*
+**/
+.portvideo-single-content {
+
+	p {
+		margin-right: 1em;
+		
+	}
+}
+
+
+/**
+*
 * For Admin Bar while Logged in so that the Menu is visible
 *
 **/
 .admin-bar .navbar-fixed-top {
 	margin-top: 40px;
+}
+
+/**
+*
+* Widget Styles
+*
+**/
+.widget {
+
+	background-color: lighten( black, 90% );
+	// background: url('http://stube/wp-content/themes/skeleton-tube/images/background-pattern-3.jpg');
+	background: url('http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg');
+	padding: 1em;
+
+	ul {
+
+		padding-left: 0 !important;
+		margin-left: 0 !important;
+
+		li {
+			list-style-type: none;
+
+
+		}
+	}
 }
 
 /**

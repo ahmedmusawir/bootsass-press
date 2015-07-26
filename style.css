@@ -5907,7 +5907,8 @@ a img.aligncenter {
 .jumbotron {
   padding-top: 5.5em; }
   .jumbotron h1 {
-    color: #296294; }
+    color: #296294;
+    font-variant: small-caps; }
   .jumbotron .index-content {
     padding-bottom: 3em; }
     .jumbotron .index-content h1 {
@@ -5919,12 +5920,25 @@ a img.aligncenter {
 
 .blog-index-content {
   padding-left: 1em; }
+  .blog-index-content a {
+    text-decoration: none; }
+    .blog-index-content a:hover {
+      color: #ffb3b3 !important; }
 
 .blog-index-img {
-  padding-right: 1.3em; }
+  padding-right: 1.3em;
+  margin-bottom: 1.5em; }
 
 .portfolio-item img {
   padding-bottom: 1em; }
+
+/**
+*
+* PortVideo Content
+*
+**/
+.portvideo-single-content p {
+  margin-right: 1em; }
 
 /**
 *
@@ -5933,6 +5947,21 @@ a img.aligncenter {
 **/
 .admin-bar .navbar-fixed-top {
   margin-top: 40px; }
+
+/**
+*
+* Widget Styles
+*
+**/
+.widget {
+  background-color: #e6e6e6;
+  background: url("http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg");
+  padding: 1em; }
+  .widget ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important; }
+    .widget ul li {
+      list-style-type: none; }
 
 /**
 *

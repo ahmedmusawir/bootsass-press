@@ -42,13 +42,10 @@
             wp_nav_menu( $args );
 
         ?>
-          
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Search</button>
-          </form>
+          <div class="navbar-form navbar-right">
+              <?php get_search_form(); ?>
+          </div>
+
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
