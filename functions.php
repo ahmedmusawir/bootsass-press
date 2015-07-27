@@ -103,6 +103,105 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 create_widget( 'Sidebar Blog', 'sidebar-blog', 'Displays on the Blog Sidebar' );
 create_widget( 'Sidebar Page', 'sidebar-page', 'Displays on the Page Sidebar' );
 
+function custom_pagination($numpages = '', $pagerange = '', $paged='') {
+
+  if (empty($pagerange)) {
+    $pagerange = 2;
+  }
+
+  /**
+   * This first part of our function is a fallback
+   * for custom pagination inside a regular loop that
+   * uses the global $paged and global $wp_query variables.
+   * 
+   * It's good because we can now override default pagination
+   * in our theme, and use this function in default quries
+   * and custom queries.
+   */
+  global $paged;
+  if (empty($paged)) {
+    $paged = 1;
+  }
+  if ($numpages == '') {
+    global $wp_query;
+    $numpages = $wp_query->max_num_pages;
+    if(!$numpages) {
+        $numpages = 1;
+    }
+  }
+
+  /** 
+   * We construct the pagination arguments to enter into our paginate_links
+   * function. 
+   */
+  $pagination_args = array(
+    'base'            => get_pagenum_link(1) . '%_%',
+    'format'          => 'page/%#%',
+    'total'           => $numpages,
+    'current'         => $paged,
+    'show_all'        => False,
+    'end_size'        => 1,
+    'mid_size'        => $pagerange,
+    'prev_next'       => True,
+    'prev_text'       => __('&laquo;'),
+    'next_text'       => __('&raquo;'),
+    'type'            => 'plain',
+    'add_args'        => false,
+    'add_fragment'    => ''
+  );
+
+  $paginate_links = paginate_links($pagination_args);
+
+  if ($paginate_links) {
+    echo "<nav class='custom-pagination'>";
+      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+      echo $paginate_links;
+    echo "</nav>";
+  }
+
+}
+
+// BootStrap Pagination 
+
+function bootstrap_pagination($pages = '10', $range = 2)
+{
+// $showitems = ($range * 2);
+$showitems = ($range * 2)+1;
+
+global $paged;
+if(empty($paged)) $paged = 1;
+
+if($pages == '')
+{
+    global $wp_query;
+    $pages = $wp_query->max_num_pages;
+    if(!$pages)
+        {
+            $pages = 1;
+        }
+}
+
+if(1 != $pages)
+{
+    echo "<div><ul class='pagination'>";
+    if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."'>&laquo;</a></li>";
+    if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a></li>";
+
+    for ($i=1; $i <= $pages; $i++)
+    {
+        if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+        {
+            echo ($paged == $i)? "<li class=''><span class='active'>".$i."</span></li>":"<li><a href='".get_pagenum_link($i)."' class='' >".$i."</a></li>";
+        }
+    }
+
+    if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a></li>";
+    if ($paged < $pages-1 && $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>&raquo;</a></li>";
+        echo "</ul></div>\n";
+    }
+}
+
+
 
 
 

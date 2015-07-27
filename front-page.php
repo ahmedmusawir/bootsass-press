@@ -2,7 +2,7 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
+      <div class="container text-center">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <!-- <h2><?php //the_title(); ?></h2> -->

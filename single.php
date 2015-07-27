@@ -21,7 +21,7 @@
                   | <a href="<?php comments_link(); ?>"><?php comments_number(); ?> </a></p>
 
               <?php if ( has_post_thumbnail() ) : ?>
-                <div class="pull-left">  
+                <div class="">  
                   <figure class="blog-index-img" >
 
                     

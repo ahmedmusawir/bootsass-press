@@ -6002,4 +6002,56 @@ a img.aligncenter {
   color: #fff;
   font-weight: bold; }
 
+/* ============================================================
+  CUSTOM PAGINATION - only for test 3 page
+============================================================ */
+.custom-pagination span,
+.custom-pagination a {
+  display: inline-block;
+  padding: 2px 10px; }
+
+.custom-pagination a {
+  background-color: #ebebeb;
+  color: #ff3c50; }
+
+.custom-pagination a:hover {
+  background-color: #ff3c50;
+  color: #fff; }
+
+.custom-pagination span.page-num {
+  margin-right: 10px;
+  padding: 0; }
+
+.custom-pagination span.dots {
+  padding: 0;
+  color: gainsboro; }
+
+.custom-pagination span.current {
+  background-color: #ff3c50;
+  color: #fff; }
+
+/**
+*
+* Bootstrap Pagination
+*
+**/
+ul.pagination .active {
+  background-color: #d9534f;
+  color: white;
+  font-weight: bold; }
+
+/**
+*
+* Single PortVideo Post top Nave
+*
+**/
+.custom-post-nav {
+  margin-right: 1.2em; }
+  .custom-post-nav .nav-item {
+    padding-bottom: 1.2em; }
+
+.single-portvideo-link-btn {
+  padding-right: 1.3em;
+  margin-top: -.5em; }
+
 /*# sourceMappingURL=style.css.map */
