@@ -1,8 +1,12 @@
 @charset "utf-8";
 // Custom SASS Document
-
+.site-header {
+	padding-top: 3.5em;
+}
 .jumbotron {
+
 	padding-top: 5.5em;
+
 
 	h1 {
 		color: $brand-primary;
@@ -16,6 +20,28 @@
 		h1 {
 			color: darken($brand-warning, 10%);
 		}
+	}
+}
+
+.home .jumbotron {
+	padding-top: 2em;
+
+	h1 {
+		font-weight: bold;
+		text-shadow: 4px 4px 8px lighten( black, 20%);
+		opacity: .8;
+	}
+
+	.btn {
+		opacity: .8;
+	}
+
+	p {
+		// text-shadow: 2px 2px 2px lighten( black, 20%);
+		// font-weight: bold;
+		opacity: .9;
+
+		color: $brand-primary;
 	}
 }
 
@@ -81,6 +107,7 @@
 	// background: url('http://stube/wp-content/themes/skeleton-tube/images/background-pattern-3.jpg');
 	background: url('http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg');
 	padding: 1em;
+	margin-bottom: 1em;
 
 	ul {
 

@@ -43,7 +43,7 @@
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
                'post_type' => 'portvideo',
-               'posts_per_page' => 6,
+               'posts_per_page' => 3,
                'paged' => $paged
 
             );

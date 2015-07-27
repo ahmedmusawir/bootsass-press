@@ -65,6 +65,7 @@ add_action( 'init', 'register_theme_menus' );
 **/
 add_theme_support( 'post-thumbnails' ); 
 add_image_size( 'portvideo-single-banner', 1180, 580, true );
+add_image_size( 'featured-banner', 1920, 600, true );
 
 /**
 *

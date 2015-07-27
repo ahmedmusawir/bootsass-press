@@ -5904,6 +5904,9 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+.site-header {
+  padding-top: 3.5em; }
+
 .jumbotron {
   padding-top: 5.5em; }
   .jumbotron h1 {
@@ -5913,6 +5916,18 @@ a img.aligncenter {
     padding-bottom: 3em; }
     .jumbotron .index-content h1 {
       color: #ec971f; }
+
+.home .jumbotron {
+  padding-top: 2em; }
+  .home .jumbotron h1 {
+    font-weight: bold;
+    text-shadow: 4px 4px 8px #333333;
+    opacity: .8; }
+  .home .jumbotron .btn {
+    opacity: .8; }
+  .home .jumbotron p {
+    opacity: .9;
+    color: #296294; }
 
 .blog-post-meta {
   color: #cc0000;
@@ -5956,7 +5971,8 @@ a img.aligncenter {
 .widget {
   background-color: #e6e6e6;
   background: url("http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg");
-  padding: 1em; }
+  padding: 1em;
+  margin-bottom: 1em; }
   .widget ul {
     padding-left: 0 !important;
     margin-left: 0 !important; }

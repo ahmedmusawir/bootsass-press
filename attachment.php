@@ -4,7 +4,7 @@
        <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1><?php the_title(); ?></h1>
+          <h1>Attachment Page</h1>
         </div>
       </div>
 
