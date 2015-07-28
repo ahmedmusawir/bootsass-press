@@ -26,10 +26,8 @@
               <?php if ( has_post_thumbnail() ) : ?>
                 <div class="pull-left">  
                   <figure class="img-responsive blog-index-img" >
-
-                    
-                        <?php the_post_thumbnail('thumbnail'); ?>
-                   
+                        
+                   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>                    
                       
                   </figure>
                 </div>

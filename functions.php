@@ -69,6 +69,16 @@ add_image_size( 'featured-banner', 1920, 600, true );
 
 /**
 *
+* For Responsive Image Plugin
+*
+**/
+add_image_size( 'sml_size', 300 ); 
+add_image_size( 'mid_size', 600 ); 
+add_image_size( 'lrg_size', 1200 ); 
+add_image_size( 'sup_size', 2400 );
+
+/**
+*
 * Customize Excerpt
 *
 **/
@@ -101,8 +111,12 @@ function create_widget( $name, $id, $description ) {
 create_widget( 'Front Page Left', 'front-left', 'Displays on the left of the homepage' );
 create_widget( 'Front Page Center', 'front-center', 'Displays on the center of the homepage' );
 create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the homepage' );
+
 create_widget( 'Sidebar Blog', 'sidebar-blog', 'Displays on the Blog Sidebar' );
 create_widget( 'Sidebar Page', 'sidebar-page', 'Displays on the Page Sidebar' );
+
+create_widget( 'Front Page Left', 'front-page-lastrow-left', 'Displays on the Front Page Last Row Left Block' );
+create_widget( 'Front Page Right', 'front-page-lastrow-right', 'Displays on the Front Page Last Row Right Block' );
 
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 

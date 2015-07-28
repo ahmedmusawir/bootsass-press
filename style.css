@@ -5904,6 +5904,15 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+a img {
+  transition: 1s all ease-out; }
+  a img:hover {
+    opacity: .5 !important; }
+a .attachment-thumbnail {
+  transition: 2s all ease-in-out; }
+  a .attachment-thumbnail:hover {
+    border: .5em dotted white; }
+
 .site-header {
   padding-top: 3.5em; }
 
@@ -5954,6 +5963,9 @@ a img.aligncenter {
 **/
 .portvideo-single-content p {
   margin-right: 1em; }
+
+.custom-post-nav .glyphicon {
+  margin-top: -0.2em !important; }
 
 /**
 *

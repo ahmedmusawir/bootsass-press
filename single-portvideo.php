@@ -20,15 +20,15 @@
 
             <nav class="custom-post-nav well">
                <section class="nav-item">
-                  <div class="pull-left col-md-1"><?php next_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-left">Prev</span>' ); ?></div>
-                  <div class="text-center col-md-10">
+                  <div class="pull-left col-xs-2 col-sm-1 col-md-1"><?php next_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-left"></span>' ); ?></div>
+                  <div class="text-center col-xs-8 col-sm-10 col-md-10">
                     <a href="<?php bloginfo( 'url' ); ?>/?p=219"><span class="glyphicon glyphicon-th"></span></a>
                   </div>
-                  <div class="pull-right col-md-1"><?php previous_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-right">Next</span>' ); ?></div>
+                  <div class="pull-right col-xs-1 col-sm-1 col-md-1"><?php previous_post_link( '%link', '<span class="glyphicon glyphicon-circle-arrow-right"></span>' ); ?></div>
                </section>
             </nav>
 
-            <div class="blog-index-content">
+            <div class="content">
                 <p class="blog-post-meta col-md-9"><?php echo the_time( 'l, F jS, Y' ); ?> 
                     by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
                     in <?php the_category( ', '); ?>
@@ -38,8 +38,8 @@
             </div>
 
 
-            <?php if ( has_post_thumbnail() ) : ?>
-                  <figure class="img-responsive blog-index-img" >
+              <?php if ( has_post_thumbnail() ) : ?>
+                  <figure class="blog-index-img" >
 
                     
                         <?php the_post_thumbnail('portvideo-single-banner', array( 'class'  => "img-responsive")); ?>
