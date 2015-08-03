@@ -14,7 +14,7 @@
 
             <div class="col-md-8">
              
-              <div class="row blog-index-content">
+              <!-- <div class="row blog-index-content"> -->
               <p class="blog-post-meta"><?php echo the_time( 'l, F jS, Y' ); ?> 
                   by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
                   in <?php the_category( ', '); ?>
@@ -35,10 +35,19 @@
                 <div class="">  
                   <p><?php the_content(); ?></p>
                 </div>
-            </div>
+            <!-- </div> -->
 
-            </div>
+            
         <?php endwhile; ?>
+
+
+            <section>
+            <?php comments_template(); ?>
+              <?php //comment_form(); ?>
+            </section>
+
+          </div> <!-- CONTENT COLUMN -->
+        
     <?php else : ?>
               
               <h3>No Content Found ...</h3>
@@ -51,7 +60,7 @@
             <?php get_sidebar( 'page' ); ?>
           </div>
 
-        </div>
+        </div> <!-- END OF ROW -->
 
       </div>
 
