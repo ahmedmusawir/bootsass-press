@@ -5914,7 +5914,12 @@ a .attachment-thumbnail {
     border: .5em dotted white; }
 
 .site-header {
-  padding-top: 3.5em; }
+  padding-top: 3em; }
+  @media (min-width: 769px) and (max-width: 993px) {
+    .site-header {
+      border: 2px solid yellow;
+      color: red;
+      margin-top: 3.5em; } }
 
 .jumbotron {
   padding-top: 5.5em; }
@@ -5943,7 +5948,8 @@ a .attachment-thumbnail {
   font-style: italic; }
 
 .blog-index-content {
-  padding-left: 1em; }
+  padding-left: 1em;
+  padding-right: 1em; }
   .blog-index-content a {
     text-decoration: none; }
     .blog-index-content a:hover {
@@ -5977,19 +5983,21 @@ a .attachment-thumbnail {
 
 /**
 *
-* Widget Styles
+* Sidebar Widget Styles
 *
 **/
-.widget {
-  background-color: #e6e6e6;
-  background: url("http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg");
-  padding: 1em;
-  margin-bottom: 1em; }
-  .widget ul {
-    padding-left: 0 !important;
-    margin-left: 0 !important; }
-    .widget ul li {
-      list-style-type: none; }
+ul#sidebar {
+  padding-left: 0; }
+  ul#sidebar .widget {
+    background-color: #e6e6e6;
+    background: url("http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg");
+    padding: 1em;
+    margin-bottom: 1em; }
+    ul#sidebar .widget ul {
+      padding-left: 0 !important;
+      margin-left: 0 !important; }
+      ul#sidebar .widget ul li {
+        list-style-type: none; }
 
 /**
 *
@@ -6081,5 +6089,59 @@ ul.pagination .active {
 .single-portvideo-link-btn {
   padding-right: 1.3em;
   margin-top: -.5em; }
+
+/**
+*
+* Contact Button for Modal at Header Nav
+*
+**/
+.contact-btn {
+  margin-top: .5em; }
+
+/**
+*
+* Off Canvas Sidebar
+*
+**/
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out; }
+
+  .row-offcanvas-right {
+    right: 0; }
+
+  .row-offcanvas-left {
+    left: 0; }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%;
+    /* 6 columns */ }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%;
+    /* 6 columns */ }
+
+  .row-offcanvas-right.active {
+    right: 50%;
+    /* 6 columns */ }
+
+  .row-offcanvas-left.active {
+    left: 50%;
+    /* 6 columns */ }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    /* 6 columns */ } }
 
 /*# sourceMappingURL=style.css.map */

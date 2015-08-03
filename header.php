@@ -42,6 +42,13 @@
             wp_nav_menu( $args );
 
         ?>
+        <div class="navbar-right">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary contact-btn" data-toggle="modal" data-target="#myModal">
+            Contact Us
+          </button>
+        </div>
+        
           <div class="navbar-form navbar-right">
               <?php get_search_form(); ?>
           </div>

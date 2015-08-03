@@ -1,6 +1,7 @@
 @charset "utf-8";
 // Custom SASS Document
 
+
 a {
 
 	img {
@@ -22,8 +23,17 @@ a {
 }
 
 .site-header {
-	padding-top: 3.5em;
+	padding-top: 3em;
+	// border: 1px solid blue;
+	
+	@media (min-width: 769px) and (max-width: 993px) {
+	  border: 2px solid yellow;
+	  color: red;
+	  margin-top: 3.5em;
+	}
+
 }
+
 .jumbotron {
 
 	padding-top: 5.5em;
@@ -74,6 +84,7 @@ a {
 
 .blog-index-content {
 	padding-left: 1em;
+	padding-right: 1em;
 
 	a {
 		text-decoration: none;
@@ -125,30 +136,36 @@ a {
 
 /**
 *
-* Widget Styles
+* Sidebar Widget Styles
 *
 **/
-.widget {
+ul#sidebar {
 
-	background-color: lighten( black, 90% );
-	// background: url('http://stube/wp-content/themes/skeleton-tube/images/background-pattern-3.jpg');
-	background: url('http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg');
-	padding: 1em;
-	margin-bottom: 1em;
+	padding-left: 0;
+	// border: 1px dotted red;
 
-	ul {
+	.widget {
 
-		padding-left: 0 !important;
-		margin-left: 0 !important;
+		background-color: lighten( black, 90% );
+		// background: url('http://stube/wp-content/themes/skeleton-tube/images/background-pattern-3.jpg');
+		background: url('http://bootsass/wp-content/themes/bootsass-press/images/background-pattern-3.jpg');
+		padding: 1em;
+		margin-bottom: 1em;
 
-		li {
-			list-style-type: none;
+		ul {
+
+			padding-left: 0 !important;
+			margin-left: 0 !important;
+
+			li {
+				list-style-type: none;
 
 
+			}
 		}
 	}
-}
 
+}
 /**
 *
 * Theme Navigation
@@ -259,6 +276,64 @@ ul.pagination {
 	margin-top: -.5em;
 }
 
+/**
+*
+* Contact Button for Modal at Header Nav
+*
+**/
+.contact-btn {
+	margin-top: .5em;
+}
+
+/**
+*
+* Off Canvas Sidebar
+*
+**/
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
 
 
 

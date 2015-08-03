@@ -11,12 +11,17 @@
 
     <div class="container">
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-8">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+          <!-- offcanvas Button -->
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Sidebar</button>
+          </p>
 
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
          
             <div class="row blog-index-content">
+            
               <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <p class="blog-post-meta"><?php echo the_time( 'l, F jS, Y' ); ?> 
                   by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
@@ -48,8 +53,8 @@
 
           <?php endif; ?>
          
-        </div>
-        <div class="col-md-4">
+        </div> <!-- END COL-8 -->
+        <div class="col-xs-12 col-sm-4 col-md-4 sidebar-offcanvas">
           <?php get_sidebar(); ?>
         </div>
       </div>
